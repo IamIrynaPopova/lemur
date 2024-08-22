@@ -1,5 +1,5 @@
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #000;
   background-color: #fff;
   font-weight: 400;
@@ -9,14 +9,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 @media (max-width: 768px) {
   .menu {
     display: none;
   }
-    .news {
+  .news {
     flex-direction: column;
     align-items: center;
   }
@@ -24,6 +23,21 @@ body {
   .article {
     margin-right: 0;
     margin-bottom: 34px;
+  }
+  .news__list {
+    justify-content: space-between;
+  }
+
+  .news__list-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .users__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .users {
+    margin-right: 26px;
+    margin-bottom: 10px;
   }
 }
 
@@ -36,11 +50,42 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .news__list {
+    justify-content: space-between;
+  }
 
   .article {
     margin-right: 0;
     margin-bottom: 34px;
   }
+  .users__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .users {
+    margin-right: 26px;
+    margin-bottom: 10px;
+  }
 }
 
+@media (min-width: 1280px) {
+  .news {
+    flex-direction: row;
+  }
+  .news__list {
+    justify-content: space-between;
+  }
 
+  .article {
+    max-width: 605px;
+    margin-right: 34px;
+    margin-bottom: 34px;
+  }
+
+  .users {
+    margin-right: 26px;
+  }
+  .users__wrapper {
+    justify-content: space-between;
+  }
+}
